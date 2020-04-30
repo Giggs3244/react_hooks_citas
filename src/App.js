@@ -16,6 +16,7 @@ function App() {
   // se modifique el estado citas, por eso se tiene como dependencia en el useEffect ([citas])
   useEffect(() => {
     console.log("useEffect");
+    let citasIniciales = JSON.parse(localStorage.getItem("citas"));
     if (citasIniciales) {
       localStorage.setItem("citas", JSON.stringify(citas));
     } else {
